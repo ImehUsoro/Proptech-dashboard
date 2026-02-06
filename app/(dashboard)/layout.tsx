@@ -4,7 +4,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-page-bg">
+    <div className="flex-1 bg-page-bg">
       {children}
     </div>
   );

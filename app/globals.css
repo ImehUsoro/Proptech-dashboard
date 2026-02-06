@@ -145,6 +145,13 @@
   --color-green-4: #176D58;
   --color-blue-1: #4545FE;
   --color-page-bg: #FBFCFC;
+  --color-red-1: #F04438;
+  --color-card-header-bg: #F9FAFB;
+  --color-card-title: #292929;
+  
+  --color-red-1: var(--color-red-1);
+  --color-card-header-bg: var(--color-card-header-bg);
+  --color-card-title: var(--color-card-title);
 }
 
 :root {
@@ -220,8 +227,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html, body {
+    height: 100%;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-euclid);
+    display: flex;
+    flex-direction: column;
+  }
+  #__next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 }

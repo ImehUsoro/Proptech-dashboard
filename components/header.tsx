@@ -29,7 +29,7 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const currentActiveIndex = navItems.findIndex((item) => item.href === pathname);
+  // const currentActiveIndex = navItems.findIndex((item) => item.href === pathname);
 
   return (
     <header className="w-full">
@@ -158,7 +158,7 @@ export default function Header() {
                     />
                   </motion.div>
                   <motion.span
-                    className={`text-[10px] sm:text-xs md:text-[14px] whitespace-nowrap ${isActive ? "font-semibold" : "font-normal"}`}
+                    className={`text-[10px] sm:text-xs md:text-sm whitespace-nowrap ${isActive ? "font-semibold" : "font-normal"}`}
                     variants={navItemContentVariants}
                     animate={isActive ? "active" : "inactive"}
                   >
