@@ -80,7 +80,7 @@ const metricsByDuration: Record<Duration, {
     totalInflow: "₦120,000,000.00",
     mrr: "₦50,000,000.00",
     commissionRevenue: "₦200,000,000.00",
-    gmv: "-₦100,000,000.00",
+    gmv: "₦100,000,000.00",
     totalInflowChange: "2.5%",
     mrrChange: "2.5%",
     commissionRevenueChange: "0.5%",
@@ -249,7 +249,7 @@ export default function SalesOverview() {
 
         <div className="flex-1 grid grid-cols-2 gap-4 min-w-[380px]">
           <div className="bg-white border border-grey-1 rounded-lg w-full h-[74px] p-3 flex flex-col justify-between">
-            <p className="text-[19px] font-semibold text-blue-1 leading-tight wrap-break-word">{metrics.totalInflow}</p>
+            <p className="text-lg font-semibold text-blue-1 leading-tight wrap-break-word">{metrics.totalInflow}</p>
             <div className="flex items-center gap-2">
               <p className="text-[10px] font-normal text-black-2">Total Inflow</p>
               <div className="flex items-center gap-1">
@@ -263,7 +263,7 @@ export default function SalesOverview() {
             </div>
           </div>
           <div className="bg-white border border-grey-1 rounded-lg w-full h-[74px] p-3 flex flex-col justify-between">
-            <p className="text-[19px] font-semibold text-green-2 leading-tight wrap-break-word">{metrics.mrr}</p>
+            <p className="text-lg font-semibold text-green-2 leading-tight wrap-break-word">{metrics.mrr}</p>
             <div className="flex items-center gap-2">
               <p className="text-[10px] font-normal text-black-2">MRR</p>
               <div className="flex items-center gap-1">
@@ -281,26 +281,47 @@ export default function SalesOverview() {
             <div className="flex items-center gap-2">
               <p className="text-[10px] font-normal text-black-2">Commission Revenue</p>
               <div className="flex items-center gap-1">
-                <div className="w-[14px] h-[14px] rounded-full bg-red-1 flex items-center justify-center shrink-0">
+                <div 
+                  className="w-[14px] h-[14px] rounded-full flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: "#F04438" }}
+                >
                   <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                     <path d="M4 7L4 1M4 7L1 4M4 7L7 4" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="text-[10px] font-normal text-red-1">{metrics.commissionRevenueChange}</span>
+                <span 
+                  className="text-[10px] font-normal"
+                  style={{ color: "#F04438" }}
+                >
+                  {metrics.commissionRevenueChange}
+                </span>
               </div>
             </div>
           </div>
           <div className="bg-white border border-grey-1 rounded-lg w-full h-[74px] p-3 flex flex-col justify-between">
-            <p className="text-[19px] font-semibold text-red-1 leading-tight wrap-break-word">{metrics.gmv}</p>
+            <p 
+              className="text-lg font-semibold leading-tight wrap-break-word"
+              style={{ color: "#F04438" }}
+            >
+              {metrics.gmv}
+            </p>
             <div className="flex items-center gap-2">
               <p className="text-[10px] font-normal text-black-2">GMV</p>
               <div className="flex items-center gap-1">
-                <div className="w-[14px] h-[14px] rounded-full bg-red-1 flex items-center justify-center shrink-0">
+                <div 
+                  className="w-[14px] h-[14px] rounded-full flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: "#F04438" }}
+                >
                   <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                     <path d="M4 7L4 1M4 7L1 4M4 7L7 4" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="text-[10px] font-normal text-red-1">{metrics.gmvChange}</span>
+                <span 
+                  className="text-[10px] font-normal"
+                  style={{ color: "#F04438" }}
+                >
+                  {metrics.gmvChange}
+                </span>
               </div>
             </div>
           </div>
