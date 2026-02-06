@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function UsersOverview() {
   return (
-    <div className="bg-white border border-grey-1 rounded-2xl overflow-hidden flex flex-col">
+    <div className="bg-white border border-grey-1 rounded-2xl overflow-hidden flex flex-col h-[152px]">
         <div className="bg-card-header-bg border-b-[0.5px] border-grey-1 px-4 py-3 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 flex items-center justify-center">

@@ -153,15 +153,6 @@
   --color-calendar-border: #242424;
   --color-calendar-header-bg: #171717;
   --color-calendar-area-bg: #0D0D0D;
-  
-  --color-red-1: var(--color-red-1);
-  --color-card-header-bg: var(--color-card-header-bg);
-  --color-card-title: var(--color-card-title);
-  --color-button-dark: var(--color-button-dark);
-  --color-calendar-selected: var(--color-calendar-selected);
-  --color-calendar-border: var(--color-calendar-border);
-  --color-calendar-header-bg: var(--color-calendar-header-bg);
-  --color-calendar-area-bg: var(--color-calendar-area-bg);
 }
 
 :root {
