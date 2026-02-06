@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Expert Listing - PropTech Dashboard
 
-## Getting Started
+A modern, responsive property technology dashboard application built with Next.js 16, React 19, and Tailwind CSS 4. This assessment project demonstrates high-quality code implementation following industry best practices and modern web development standards.
 
-First, run the development server:
+## 🎨 Design
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The UI design is based on the following Figma specification:
+[Figma Design](https://www.figma.com/design/4r4lQKWCS69Z22b8hKnwRA/Recruitment?node-id=26-12923&t=yRPnIf5RUQ2isDrD-0)
+
+## ✨ Features
+
+### Dashboard Overview
+- **Sales Overview**: Interactive bar charts with time-range filtering (1 Week, 1 Month, 1 Year) and key metrics display
+- **Listings Overview**: Quick stats for total, active, and archived listings
+- **Users Overview**: User metrics including total users, riders, and subscribers
+- **Property Carousels**: Three auto-playing image carousels showcasing "Most Clicked", "Most WatchListed", and "Hottest Listing" properties with smooth animations
+
+### Interactive Components
+- **Budgeting Dialog**: Modal dialog for budget creation with feature highlights and toast notifications
+- **Calendar Sheet**: Custom calendar component with date selection, month navigation, and toast feedback
+- **Responsive Navigation**: Animated header with active state indicators and mobile-friendly menu
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 16.1.6 (App Router)
+- **UI Library**: React 19.2.3
+- **Styling**: Tailwind CSS 4.0
+- **Animations**: Framer Motion (Motion) 12.31.1
+- **Charts**: Recharts 2.15.4
+- **UI Components**: Radix UI primitives
+- **Date Handling**: date-fns 4.1.0, react-day-picker 9.13.0
+- **Notifications**: Sonner 2.0.7
+- **Type Safety**: TypeScript 5
+
+## 🏗️ Architecture & Code Quality
+
+This project demonstrates:
+
+- **Component-Based Architecture**: Modular, reusable components with clear separation of concerns
+- **Type Safety**: Full TypeScript implementation with proper type definitions
+- **Animation Patterns**: Centralized animation variants in `lib/animations.ts` for reusability
+- **Responsive Design**: Mobile-first approach with breakpoint-optimized layouts
+- **Accessibility**: ARIA labels, semantic HTML, and screen reader support
+- **Performance**: Optimized images with Next.js Image component, code splitting, and efficient re-renders
+- **Modern Patterns**: React Server Components, client components where needed, and proper state management
+
+## 📁 Project Structure
+
+```
+app/
+  (dashboard)/          # Dashboard routes
+    page.tsx            # Main dashboard with overview cards and carousels
+components/
+  ui/                   # Reusable UI components (shadcn-based)
+  sales-overview.tsx    # Sales metrics and charts
+  listings-overview.tsx # Listings statistics
+  users-overview.tsx    # User metrics
+  property-carousel.tsx # Individual carousel component
+  budgeting-dialog.tsx  # Budget creation modal
+  calendar-sheet.tsx    # Calendar side panel
+lib/
+  animations.ts         # Centralized Framer Motion variants
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Code Standards
 
-## Deploy on Vercel
+This project adheres to:
+- **ESLint** configuration for code quality
+- **TypeScript** strict mode for type safety
+- **Consistent naming conventions** and file organization
+- **Reusable animation patterns** and component abstractions
+- **Responsive design principles** with mobile-first approach
+- **Accessibility best practices** (WCAG guidelines)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Key Highlights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Pixel-perfect implementation matching the Figma design specifications
+- Smooth animations and transitions throughout the application
+- Fully responsive layout that works seamlessly across all device sizes
+- Clean, maintainable codebase with proper TypeScript typing
+- Optimized performance with Next.js best practices
+- Accessible UI components following modern web standards
+
+---
+
+Built as an assessment project demonstrating proficiency in modern React/Next.js development, TypeScript, and UI/UX implementation.
