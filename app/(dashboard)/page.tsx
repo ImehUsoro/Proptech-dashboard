@@ -1,6 +1,7 @@
 import SalesOverview from "@/components/sales-overview";
 import ListingsOverview from "@/components/listings-overview";
 import UsersOverview from "@/components/users-overview";
+import PropertyCarouselsSection from "@/components/property-carousels-section";
 
 export default function DashboardPage() {
   return (
@@ -21,6 +22,8 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+
+      <PropertyCarouselsSection />
     </div>
   );
 }

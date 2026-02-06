@@ -128,3 +128,40 @@ export const swipeRight: Variants = {
     },
   },
 };
+
+export const carouselZoom: Variants = {
+  initial: {
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+  hover: {
+    scale: 1.1,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+};
+
+export const carouselImageTransition: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+};
