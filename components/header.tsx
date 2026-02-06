@@ -7,13 +7,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { navItemContentVariants } from "@/lib/animations";
 import NavIcon from "./nav-icon";
+import BudgetingDialog from "./budgeting-dialog";
+import CalendarSheet from "./calendar-sheet";
 
 const utilityIcons = [
-  { src: "/icons/calculator.svg", alt: "Calculator" },
-  { src: "/icons/calendar.svg", alt: "Calendar" },
-  { src: "/icons/search.svg", alt: "Search" },
-  { src: "/icons/wallet.svg", alt: "Wallet" },
-  { src: "/icons/marketplace.svg", alt: "Marketplace" },
+  { src: "/icons/calculator.svg", alt: "Calculator", type: "calculator" },
+  { src: "/icons/calendar.svg", alt: "Calendar", type: "calendar" },
+  { src: "/icons/search.svg", alt: "Search", type: "search" },
+  { src: "/icons/wallet.svg", alt: "Wallet", type: "wallet" },
+  { src: "/icons/marketplace.svg", alt: "Marketplace", type: "marketplace" },
 ];
 
 const navItems = [
@@ -28,6 +30,16 @@ const navItems = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [budgetDialogOpen, setBudgetDialogOpen] = useState(false);
+  const [calendarSheetOpen, setCalendarSheetOpen] = useState(false);
+
+  const handleUtilityIconClick = (type: string) => {
+    if (type === "calculator") {
+      setBudgetDialogOpen(true);
+    } else if (type === "calendar") {
+      setCalendarSheetOpen(true);
+    }
+  };
 
   // const currentActiveIndex = navItems.findIndex((item) => item.href === pathname);
 
@@ -48,6 +60,7 @@ export default function Header() {
             {utilityIcons.map((icon, index) => (
               <button
                 key={index}
+                onClick={() => handleUtilityIconClick(icon.type)}
                 className="cursor-pointer hover:opacity-80 transition-opacity"
                 aria-label={icon.alt}
               >
@@ -102,6 +115,7 @@ export default function Header() {
               {utilityIcons.map((icon, index) => (
                 <button
                   key={index}
+                  onClick={() => handleUtilityIconClick(icon.type)}
                   className="cursor-pointer hover:opacity-80 transition-opacity"
                   aria-label={icon.alt}
                 >
@@ -121,7 +135,7 @@ export default function Header() {
 
       <nav className="bg-white py-[14px] px-[4%] md:px-[6.1%] md:pr-[6.4%] border-b border-white-1 relative">
         <div className="flex items-center justify-between w-full gap-1 sm:gap-2 md:gap-4 relative">
-          {navItems.map((item, index) => {
+          {navItems.map((item) => {
             const isActive = pathname === item.href;
             
             return (
@@ -170,6 +184,15 @@ export default function Header() {
           })}
         </div>
       </nav>
+
+      <BudgetingDialog
+        open={budgetDialogOpen}
+        onOpenChange={setBudgetDialogOpen}
+      />
+      <CalendarSheet
+        open={calendarSheetOpen}
+        onOpenChange={setCalendarSheetOpen}
+      />
     </header>
   );
 }

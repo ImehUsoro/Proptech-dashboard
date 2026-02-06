@@ -148,10 +148,20 @@
   --color-red-1: #F04438;
   --color-card-header-bg: #F9FAFB;
   --color-card-title: #292929;
+  --color-button-dark: #18181B;
+  --color-calendar-selected: #2525E6;
+  --color-calendar-border: #242424;
+  --color-calendar-header-bg: #171717;
+  --color-calendar-area-bg: #0D0D0D;
   
   --color-red-1: var(--color-red-1);
   --color-card-header-bg: var(--color-card-header-bg);
   --color-card-title: var(--color-card-title);
+  --color-button-dark: var(--color-button-dark);
+  --color-calendar-selected: var(--color-calendar-selected);
+  --color-calendar-border: var(--color-calendar-border);
+  --color-calendar-header-bg: var(--color-calendar-header-bg);
+  --color-calendar-area-bg: var(--color-calendar-area-bg);
 }
 
 :root {
